@@ -35,11 +35,16 @@ function titleClickHandler(event) {
     console.log(articleSelector);
 
     /* find the correct article using the selector (value of 'href' attribute) */
+    /*szukanie po id -> document.querySelector('#[wartość przypisana do id]') */
 
-    const targetArticle = clickedElement.querySelector('.post id');
+    const targetArticle = document.querySelector(articleSelector);
     console.log(targetArticle);
 
     /* add class 'active' to the correct article */
+
+    targetArticle.classList.add('active');
+    console.log('targetArticle:', targetArticle);
+
 }
 
 const links = document.querySelectorAll('.titles a');
