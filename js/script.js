@@ -77,6 +77,7 @@ function generateTitleLinks() {
         const titleText = articleTitle.textContent; /* get the title from the title element */
         console.log(titleText)
 
+
     }
 
 
