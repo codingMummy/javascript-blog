@@ -76,9 +76,8 @@ function generateTitleLinks() {
         // titleList.innerHTML = titleList.innerHTML + link;
         // titleList.insertAdjacentHTML('beforeend', link);
         html = html + link;
-
-
     }
+
     console.log(html);
     titleList.innerHTML = html;
 
