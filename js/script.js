@@ -67,18 +67,18 @@ function generateTitleLinks() {
 
     const articles = document.querySelectorAll(optArticleSelector);
     for (let article of articles) {
-        console.log(article);
+        // console.log(article);
         const articleId = article.getAttribute('id'); /* get the article id */
-        console.log(articleId);
+        // console.log(articleId);
         const articleTitle = article.querySelector(optTitleSelector).innerHTML; /* find the title element */
-        console.log(articleTitle);
+        // console.log(articleTitle);
         const link = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
         // titleList.innerHTML = titleList.innerHTML + link;
         // titleList.insertAdjacentHTML('beforeend', link);
         html = html + link;
     }
 
-    console.log(html);
+    // console.log(html);
     titleList.innerHTML = html;
 
     const links = document.querySelectorAll('.titles a');
@@ -96,3 +96,37 @@ function generateTitleLinks() {
 }
 
 generateTitleLinks();
+
+
+const postAuthor = '.author-name';
+
+function generateAuthorslist() {
+    // remove contents of authorsList
+
+    const authorsList = document.querySelector(postAuthor);
+    authorsList.innerHTML = " ";
+
+    let html = "";
+
+    const authors = document.querySelectorAll('.post-author');
+    for (let author of authors) {
+        console.log(author);
+        const list = document.querySelectorAll('.sidebar .authors');
+        console.log(list); /*lista*/
+        const nameAuthor = author.querySelector(postAuthor);
+        console.log(nameAuthor);
+        const link = '<li><a href="#' + nameAuthor + '"><span></span></a></li>';
+        console.log(nameAuthor);
+        authorsList.innerHTML = authorsList.innerHTML + link;
+        authorsList.insertAdjacentHTML('beforeend', link);
+        html = html + link;
+
+    }
+
+
+
+
+
+}
+
+generateAuthorslist();

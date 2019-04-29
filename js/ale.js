@@ -11,3 +11,18 @@ for (let tags of list) {
 
     // tags.innerHTML = tags.innerHTML + '<li><a href="#">foo</a></li>'
 }
+
+
+
+
+
+// for (let authors of list) {
+//             console.log(authors);
+//             const newAuthor = document.createElement('li'); /*tworzenie li*/
+//             /*tworzenie a, dodawanie atrybutu */
+//             const a = document.createElement('a');
+//             a.setAttribute('href', '#'); /*set - umieszczać, wstawiać*/
+
+//             newAuthor.appendChild(a); /*dodajemy do listy li - a wraz z atrybutami */
+//             authors.appendChild(newAuthor);
+//         }
