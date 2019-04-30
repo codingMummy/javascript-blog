@@ -98,35 +98,60 @@ function generateTitleLinks() {
 generateTitleLinks();
 
 
-const postAuthor = '.author-name';
+const postAuthor = '.authors';
 
 function generateAuthorslist() {
     // remove contents of authorsList
 
     const authorsList = document.querySelector(postAuthor);
+    // console.log(authorsList);
     authorsList.innerHTML = " ";
 
-    let html = "";
+
 
     const authors = document.querySelectorAll('.post-author');
+
     for (let author of authors) {
-        console.log(author);
-        const list = document.querySelectorAll('.sidebar .authors');
-        console.log(list); /*lista*/
-        const nameAuthor = author.querySelector(postAuthor);
+        // console.log(author);
+        const nameAuthor = author.textContent.substring(3);
+
         console.log(nameAuthor);
-        const link = '<li><a href="#' + nameAuthor + '"><span></span></a></li>';
-        console.log(nameAuthor);
+        const link = '<li><a href="#"><span>' + nameAuthor + '</span></a></li>';
         authorsList.innerHTML = authorsList.innerHTML + link;
-        authorsList.insertAdjacentHTML('beforeend', link);
-        html = html + link;
+
+
+
 
     }
+}
+
+generateAuthorslist();
+
+const tagsAll = '.tags';
+
+function generateTagsList() {
 
 
+    // remove contents of listTags
+
+    const listTags = document.querySelector(tagsAll);
+    // console.log(listTags);
+    listTags.innerHTML = "";
+
+    const tags = document.querySelectorAll('.list-horizontal');
+    // console.log(tags);
+
+    for (let tag of tags) {
+        // console.log(tag);
+        const tagsName = tag.textContent;
+        console.log(tagsName);
+
+        const link = '<li><a href="#"><span>' + tagsName + '</span></a></li>';
+        listTags.innerHTML = listTags.innerHTML + link;
+    }
 
 
 
 }
 
-generateAuthorslist();
+generateTagsList();
